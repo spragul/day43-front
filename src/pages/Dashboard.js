@@ -11,7 +11,6 @@ export function Dashboard() {
                 });
                 const data = await response.json()
                 const setdata =data.users;
-                console.log(setdata)
                 setImage(setdata)
             } catch (error) {
                 console.log(error);

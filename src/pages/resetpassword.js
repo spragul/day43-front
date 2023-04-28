@@ -20,7 +20,6 @@ import {
 export function Reset() {
     const history = useHistory();
     let {id,token}=useParams();
-    console.log(id,token);
     const restdata = async ({ newpassword }) => {
         try {
             const response = await fetch(`https://day43-back.onrender.com/resetpassword/${id}/${token}`, {
@@ -33,9 +32,8 @@ export function Reset() {
         
             const data = await response.json();
             sessionStorage.setItem('token',token)
-            console.log(data);
             history.push("/login")
-            toast("password change")
+            toast("password changed")
 
         } catch (error) {
             console.log(error)

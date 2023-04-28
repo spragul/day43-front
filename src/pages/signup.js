@@ -36,7 +36,6 @@ export function Signup() {
         },
       })
       const data = await response.json();
-      console.log(data);
         history.push("/login")
         toast("User Data Add")
       

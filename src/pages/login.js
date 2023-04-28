@@ -34,9 +34,7 @@ export function Login() {
         },
       })
       const data = await response.json();
-      console.log(data);
       sessionStorage.setItem('token',data.token)
-      console.log(data);
         history.push("/dashboard")
         toast("User login successful")
     
